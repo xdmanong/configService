@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteTargetsManager">
+    <targets>
+      <target name="nari@172.16.17.100:22" type="ssh/sftp" uuid="b31196ff-ec32-4d73-989d-ae8d1d534858">
+        <config>
+          <option name="projectRootOnTarget" value="/home/nari/ns6000/service/configService" />
+          <option name="serverName" value="nari@172.16.17.100:22 password" />
+        </config>
+        <ContributedStateBase type="GoLanguageRuntime">
+          <config>
+            <option name="goPath" value="/home/nari/go" />
+            <option name="goRoot" value="/usr/local/go/bin/go" />
+            <option name="goVersion" value="go1.20.6 linux/amd64" />
+          </config>
+        </ContributedStateBase>
+      </target>
+    </targets>
+  </component>
+</project>

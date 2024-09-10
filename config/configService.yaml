@@ -1,0 +1,30 @@
+# wfserver配置文件
+# 2023.4.20 by lin
+# 程序版本v1.0
+
+# rpcx服务器配置信息
+server:
+  addr: :9003                           # 服务发起端口
+  basePath: /rpcx_bcService             # rpcx服务起始地址
+  registerName: realtime/scada/performserver/v1  # 服务路由信息(服务调用路径: 空间/应用/组件/版本)
+
+# zookeeper集群地址
+zookeeper:
+  addrs:
+    - "172.16.17.100:2181"
+    - "172.16.17.100:2181"
+    - "172.16.17.100:2181"
+
+# redis配置信息
+redis:
+  host:
+    - "172.16.17.100:6380"
+  pass: "qwer@1234"
+  mode: 0
+
+#程序运行参数
+runtime:
+  interval: 3       #cpu、磁盘、内存、网卡信息采样频率
+  partInterval: 60  #分区信息采样频率
+  logDir: ../log/performService.log  #日志存储目录 默认../log
+  logLevel: 5     #日志输出级别 0:不输出 1:只输出panic及fault 2:输出Error 3:输出Warn 4:输出Info 5:输出Debug
